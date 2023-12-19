@@ -6,13 +6,11 @@ public class Max {
     }
 
     public static int max(int left, int mid, int right) {
-        int temp = Max.max(left, mid);
-        return temp > right ? temp : right;
+        return max(max(left, mid), right);
     }
 
     public static int max(int first, int second, int third, int fourth) {
-        int temp = Max.max(first, second, third);
-        return temp > fourth ? temp : fourth;
+        return max(max(first, second), max(third, fourth));
     }
 
 }
